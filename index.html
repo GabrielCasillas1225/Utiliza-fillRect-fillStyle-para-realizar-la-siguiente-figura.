@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+    <style type="text/css">
+
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        canvas{
+            border: solid 1px red;
+            display: block;
+            margin: 10vh auto;
+            background-color: #fff;
+        }
+
+        body{
+            background-color: #333333; 
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <canvas id="canvas" width="600" height="400" ></canvas>
+    <script>
+
+        var canvas = document.getElementById("canvas");
+        ctx = canvas.getContext('2d');
+
+    
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(10,10,100,100);
+
+        ctx.fillStyle = 'red';
+        ctx.fillRect(100,100,100,100);
+
+        ctx.fillStyle = 'rgba(255, 99, 71, 0.4)';
+        ctx.fillRect(190,190,100,100);
+
+
+        ctx.lineWidth = 5;        
+
+    </script>
+
+</body>
+</html>
