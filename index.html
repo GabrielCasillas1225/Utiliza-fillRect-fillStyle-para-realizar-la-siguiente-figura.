@@ -32,7 +32,8 @@
 <body>
 
 
-    <canvas id="canvas" width="600" height="400" ></canvas>
+    <canvas id="canvas" width="500" height="500" ></canvas>
+    <img src="./img/perrito.jpeg" alt="perrito">
     <script>
 
         var canvas = document.getElementById("canvas");
@@ -45,11 +46,65 @@
         ctx.fillStyle = 'red';
         ctx.fillRect(100,100,100,100);
 
-        ctx.fillStyle = 'rgba(255, 99, 71, 0.4)';
-        ctx.fillRect(190,190,100,100);
+        
+        ctx.beginPath();
+        ctx.moveTo(100,10);
+        ctx.lineTo(125,65);     
+        ctx.lineTo(100,65);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(185,10);
+        ctx.lineTo(125,65);
+        ctx.stroke();
 
 
-        ctx.lineWidth = 5;        
+
+        ctx.fillStyle = 'green';
+        ctx.beginPath();
+        ctx.arc(375, 150, 40, 0,2*Math.PI);
+        ctx.fill();
+
+        ctx.fillStyle = 'green';
+        ctx.beginPath();
+
+        ctx.arc(275, 150, 40, 0,2*Math.PI);
+        ctx.stroke();
+
+        //Ejercicio 1
+        
+        ctx.fillStyle = 'green'
+        ctx.font = "40px Arial"
+        ctx.fillText("Hola", 400,40.5);
+        
+        ctx.fillStroke = 'white'
+        ctx.font = "40px Arial";
+        ctx.strokeText("Hola ", 400, 40);
+
+
+        //ejercicio 2
+        var grd = ctx.createLinearGradient(100,0,0,170);
+        grd.addColorStop(0,"blue");
+        grd.addColorStop(1,"orange");
+        
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(100,100,100,170);
+
+        //ejercicio 3
+        var grd2 = ctx.createRadialGradient(240,320,5,255,340,150);
+        grd2.addColorStop(0,"red");
+        grd2.addColorStop(0.5,"green");
+        grd2.addColorStop(1,"purple");
+
+        ctx.fillStyle = grd2;
+        ctx.fillRect(140,270,200,100)
+
+        //ejercicio 4 
+
+       
 
     </script>
 
