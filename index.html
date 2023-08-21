@@ -39,7 +39,22 @@
         var canvas = document.getElementById("canvas");
         ctx = canvas.getContext('2d');
 
-    
+        canvas.addEventListener("click", (e) =>{
+            console.log("Hola")
+
+            console.log(e)
+
+            ctx.beginPath();
+            ctx.arc(e.layerX, e.layerY, 50, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            
+
+            
+
+        })
+
+    /*
         ctx.fillStyle = 'blue';
         ctx.fillRect(10,10,100,100);
 
@@ -104,7 +119,7 @@
 
         //ejercicio 4 
 
-       
+       */
 
     </script>
 
